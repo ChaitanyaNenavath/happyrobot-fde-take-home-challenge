@@ -88,7 +88,7 @@ The same pipeline is exposed to the [HappyRobot](https://www.happyrobot.ai/) pla
 ## Repository Layout
 
 ```text
-chetnya/
+Chaitanya Nenavath/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI routes + auth
