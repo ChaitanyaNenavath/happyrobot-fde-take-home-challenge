@@ -1,0 +1,58 @@
+{
+  "tools": [
+    {
+      "name": "create_agent_session",
+      "method": "POST",
+      "path": "/agent/session",
+      "headers": ["x-api-key"],
+      "body": {}
+    },
+    {
+      "name": "agent_respond",
+      "method": "POST",
+      "path": "/agent/respond",
+      "headers": ["x-api-key"],
+      "body_schema": {
+        "session_id": "string",
+        "utterance": "string"
+      }
+    },
+    {
+      "name": "verify_carrier",
+      "method": "POST",
+      "path": "/carriers/verify",
+      "headers": ["x-api-key"],
+      "body_schema": {
+        "mc_number": "string"
+      }
+    },
+    {
+      "name": "search_loads",
+      "method": "POST",
+      "path": "/loads/search",
+      "headers": ["x-api-key"],
+      "body_schema": {
+        "origin": "string|null",
+        "destination": "string|null",
+        "equipment_type": "string|null",
+        "max_results": "integer"
+      }
+    },
+    {
+      "name": "process_call",
+      "method": "POST",
+      "path": "/calls/process",
+      "headers": ["x-api-key"],
+      "body_schema": {
+        "mc_number": "string",
+        "load_id": "string|null",
+        "origin": "string|null",
+        "destination": "string|null",
+        "equipment_type": "string|null",
+        "transcript": "string",
+        "offers": "number[]",
+        "carrier_name": "string|null"
+      }
+    }
+  ]
+}
