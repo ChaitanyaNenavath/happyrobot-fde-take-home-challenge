@@ -13,7 +13,10 @@ DB_PATH = ROOT_DIR / "backend" / "data" / "calls.db"
 ENV_PATH = ROOT_DIR / "backend" / ".env"
 ENV_VALUES = dotenv_values(ENV_PATH) if ENV_PATH.exists() else {}
 
-DEFAULT_API_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8000")
+DEFAULT_API_URL = os.getenv(
+    "API_BASE_URL",
+    "https://past-claudie-happyrobot-take-home-challenge-9a010a0d.koyeb.app",
+)
 DEFAULT_API_KEY = ENV_VALUES.get("API_KEY", "")
 
 st.set_page_config(
