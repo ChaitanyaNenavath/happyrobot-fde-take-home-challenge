@@ -17,7 +17,7 @@ def _to_number(value: Any) -> float | None:
         return float(value)
     text = str(value).strip().replace("$", "").replace(",", "")
     if text.lower() in _EMPTY_TOKENS:
-        return Nones
+        return None
     try:
         return float(text)
     except ValueError:
